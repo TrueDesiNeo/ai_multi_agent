@@ -1,10 +1,16 @@
-This folder implements the multi-agent centralized pattern within a distributed environment. This architecture is designed for scalability and resilience by deploying individual agents across separate virtual machines (VMs) or distinct network endpoints.
+## Multi-Agent Centralized (Distributed Deployment)
 
-Distribution: Agents are deployed across different Virtual Machines (VMs).
+This folder implements the **multi-agent centralized pattern** within a **distributed environment**. This sophisticated architecture is explicitly designed for **scalability** and **resilience** by deploying individual agents across separate **Virtual Machines (VMs)** or distinct network endpoints.
 
-Inter-Agent Communication (IAC): Communication between the distinct agents is facilitated using the Google Agent-to-Agent (A2A) protocol. This protocol ensures reliable and structured message passing between agents residing on separate host machines.
+| Feature | Description |
+| :--- | :--- |
+| **Distribution** | Agents are deployed across different **Virtual Machines (VMs)**. |
+| **Inter-Agent Communication (IAC)** | Communication between distinct agents is facilitated using the **Google Agent-to-Agent (A2A) protocol**. This protocol ensures reliable and structured message passing between agents residing on separate host machines. |
+| **Scope** | Suitable for **production environments** requiring **horizontal scaling**, fault isolation, and the distribution of computational load across a network infrastructure. |
 
-Scope: Suitable for production environments requiring horizontal scaling, fault isolation, and the distribution of computational load across a network infrastructure.
+### Directory Structure: `1.1_Multi_Agent_Centralized_A2A`
+
+The structure below reflects the independent nature of each agent and the client, where each directory represents a potentially separate deployment unit (e.g., a distinct VM or service container).
 
 Directory structure:
 
