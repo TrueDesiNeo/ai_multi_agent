@@ -1,0 +1,10 @@
+a2a-sdk[http-server]
+uvicorn
+httpx
+langgraph
+langchain
+langchain-openai
+langchain-community
+pydantic
+python-dotenv
+tavily-python
