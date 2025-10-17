@@ -33,3 +33,18 @@ This folder implements the **multi-agent centralized pattern** within a **distri
 * **Distribution:** Agents are deployed across different **Virtual Machines (VMs)**.
 * **Inter-Agent Communication (IAC):** Communication between the distinct agents is facilitated using the **Google Agent-to-Agent (A2A) protocol**. This protocol ensures reliable and structured message passing between agents residing on separate host machines.
 * **Scope:** Suitable for production environments requiring **horizontal scaling**, fault isolation, and the distribution of computational load across a network infrastructure.
+
+---
+
+## Multi-Agent DeCentralized (P2P) (Distributed Deployment)
+
+### `2.Multi_Agent_P2P_NATS`
+
+This folder implements the **multi-agent DeCentralized (P2P) pattern** within a **distributed environment**. This sophisticated architecture is explicitly designed for **scalability** and **resilience** by deploying individual agents across separate **Virtual Machines (VMs)** or distinct network endpoints.
+
+| Feature | Description |
+| :--- | :--- |
+| **Distribution** | Agents are deployed across different **Virtual Machines (VMs)**. |
+| **Inter-Agent Communication (IAC)** | Communication between distinct agents is facilitated using the **NATS**. This protocol ensures reliable and structured message passing between agents residing on separate host machines. |
+| **Scope** | Suitable for **production environments** requiring **horizontal scaling**, fault isolation, and the distribution of computational load across a network infrastructure. |
+
