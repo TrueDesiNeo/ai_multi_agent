@@ -48,3 +48,16 @@ This folder implements the **multi-agent DeCentralized (P2P) pattern** within a 
 | **Inter-Agent Communication (IAC)** | Communication between distinct agents is facilitated using the **NATS**. This protocol ensures reliable and structured message passing between agents residing on separate host machines. |
 | **Scope** | Suitable for **production environments** requiring **horizontal scaling**, fault isolation, and the distribution of computational load across a network infrastructure. |
 
+## Hierarchical Multi Agent
+
+### ``3_Multi_Agent_Hierarchical_NATS
+This folder implements the **NATS-backed multi agent** designed for generating structured, quality-controlled content (like articles or technical documents) using large language models (LLMs). The workflow is hierarchical and asynchronous, moving a root request through distinct editor, writer, and verifier stages.
+
+| Component | File | Role | NATS Input Subject | NATS Output Subject(s) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Chief Editor** | `chief_editor_service.py` | Receives root requests, delegates topic proposal, and **fans out** topics. | `demo.chief.in` | `demo.section.in` |
+| **Section Editor** | `section_editor_service.py` | Receives topics, delegates section/outline generation, and forwards tasks. | `demo.section.in` | `demo.write.in` |
+| **Writer** | `writer_service.py` | Receives section tasks (or revisions), delegates drafting via LLM, and forwards draft. | `demo.write.in` | `demo.verify.in` |
+| **Verifier** | `verify_service.py` | Scores draft via LLM. **Routes** bad drafts back for revision, or approves the final content. | `demo.verify.in` | `demo.write.in`, `demo.done` |
+| **CLI Client** | `client.py` | Publishes root request, subscribes to final output, and logs results. | (N/A) | `demo.chief.in` (Pub), `demo.done` (Sub) |
+| **Streamlit Client** | `streamlit_client.py` | Interactive web UI for pipeline initiation, monitoring, and result download. | (N/A) | `demo.chief.in` (Pub), `demo.done` (Sub) |

@@ -1,0 +1,8 @@
+openai
+langgraph
+langchain-core
+langchain_openai
+pydantic
+tenacity
+nats-py
+python-dotenv
