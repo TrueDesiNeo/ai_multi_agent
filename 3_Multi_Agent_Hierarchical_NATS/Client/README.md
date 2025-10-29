@@ -30,7 +30,7 @@ python a2a_client.py \
     --sources "IPCC 2023" "NASA EarthData" \
     --research-notes "Focus on real-time inference and satellite data fusion." \
     --expected-results 8
-
+```
 
 
 # 🖥️ Streamlit Client
@@ -68,3 +68,4 @@ The client is run using the Streamlit CLI command:
 
 ```bash
 streamlit run streamlit_client.py
+```
