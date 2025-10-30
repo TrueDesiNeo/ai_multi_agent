@@ -50,7 +50,7 @@ This folder implements the **multi-agent DeCentralized (P2P) pattern** within a 
 
 ## Hierarchical Multi Agent
 
-### ``3_Multi_Agent_Hierarchical_NATS
+### `3_Multi_Agent_Hierarchical_NATS`
 This folder implements the **NATS-backed multi agent** designed for generating structured, quality-controlled content (like articles or technical documents) using large language models (LLMs). The workflow is hierarchical and asynchronous, moving a root request through distinct editor, writer, and verifier stages.
 
 | Component | File | Role | NATS Input Subject | NATS Output Subject(s) |
