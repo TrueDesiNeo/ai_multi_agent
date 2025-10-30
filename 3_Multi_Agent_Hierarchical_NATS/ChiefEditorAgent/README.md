@@ -63,11 +63,12 @@ The following environment variables are used to configure the NATS connection an
 
 ### Dependencies
 
-To run the service, you need to install the required external Python libraries:
-
+#### To run the service, you need to install the required external Python libraries:
 ```bash
-# Example dependencies based on the file header
 pip install -r requirements.txt
+```
 
+#### Start the Chief Editor Agent
 ```bash
 python chief_editor_service.py
+```

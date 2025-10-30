@@ -60,10 +60,12 @@ The service is configured primarily via environment variables for NATS connectio
 
 ### Dependencies
 
-Install the required external Python libraries:
-
+#### Install the required external Python libraries:
 ```bash
 pip install -r requirements.txt
+```
 
+#### Start the Writer Agent
 ```bash
 python writer_service.py
+```

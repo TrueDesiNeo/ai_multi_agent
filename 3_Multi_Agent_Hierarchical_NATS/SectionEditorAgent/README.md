@@ -60,11 +60,13 @@ The service is configured primarily via environment variables for NATS connectio
 
 ### Dependencies
 
-Install the required external Python libraries:
-
+#### Install the required external Python libraries:
 ```bash
 pip install -r requirements.txt
+```
 
+#### Start the Section Editor Agent
 ```bash
 python section_editor_service.py
+```
 

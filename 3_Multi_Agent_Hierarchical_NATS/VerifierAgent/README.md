@@ -64,11 +64,12 @@ The service requires configuration for both NATS connectivity and operational lo
 
 ### Dependencies
 
-Install the required external Python libraries:
-
+#### Install the required external Python libraries:
 ```bash
 pip install -r requirements.txt
+```
 
-
+#### Start Verifier Agent 
 ```bash
 python verify_service.py
+```
